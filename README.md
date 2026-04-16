@@ -1,5 +1,4 @@
 # LeetCode Solutions
-# LeetCode Solutions
 
 A collection of my LeetCode solutions in Python, created as part of my ongoing practice with algorithms, data structures, and technical problem-solving.
 
