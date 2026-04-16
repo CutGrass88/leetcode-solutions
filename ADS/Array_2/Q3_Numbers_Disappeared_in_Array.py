@@ -1,9 +1,9 @@
 def findDisappearedNumbers(nums):
-    x = set(nums)
+    x = set(nums) # Use set for very fast lookup
 
     missing = []
-    for j in range(1, len(nums)+1):
-        if j not in x:
+    for j in range(1, len(nums)+1): # All numbers to n
+        if j not in x: # Membership check
             missing.append(j)
     return missing
     
