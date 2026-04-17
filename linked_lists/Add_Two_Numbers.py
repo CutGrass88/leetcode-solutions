@@ -25,7 +25,7 @@ def addTwoNumbers(self, l1, l2):
             head = newNode
             current = newNode
         else:
-            current.next = newNode
+            current.next = newNode # type: ignore
             current = newNode
 
         if l1:
