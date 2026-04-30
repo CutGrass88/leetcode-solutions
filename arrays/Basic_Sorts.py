@@ -28,4 +28,28 @@ def selectionSort(nums):
         nums[smallestIndex] = temp
     return nums
 
-print(selectionSort([5,3,2,6,1]))
+def quickSort(nums):
+    if not nums:
+        return []
+    if len(nums) == 1:
+        return nums
+    pivot = nums[-1]
+    i = -1
+
+    for j in range(len(nums)-1):
+        if nums[j] < pivot:
+            i += 1
+            nums[i], nums[j] = nums[j], nums[i] # swap
+    nums[i+1], nums[-1] = nums[-1], nums[i+1]
+    left = nums[:i+1]
+    right = nums[i+2:]
+    
+    sortedLeft = quickSort(left)
+    sortedRight = quickSort(right)
+
+    return sortedLeft + [pivot] + sortedRight
+    
+
+            
+
+print(quickSort([5,3,2,6,1,4]))
