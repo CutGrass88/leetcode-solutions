@@ -33,23 +33,22 @@ def quickSort(nums):
         return []
     if len(nums) == 1:
         return nums
-    pivot = nums[-1]
+    pivot = nums[-1] #last number is the pivot
     i = -1
 
     for j in range(len(nums)-1):
         if nums[j] < pivot:
             i += 1
             nums[i], nums[j] = nums[j], nums[i] # swap
-    nums[i+1], nums[-1] = nums[-1], nums[i+1]
-    left = nums[:i+1]
-    right = nums[i+2:]
+    nums[i+1], nums[-1] = nums[-1], nums[i+1] # swap pivot
+    left = nums[:i+1] # left half
+    right = nums[i+2:] # right half
     
     sortedLeft = quickSort(left)
     sortedRight = quickSort(right)
 
     return sortedLeft + [pivot] + sortedRight
-    
-
-            
-
-print(quickSort([5,3,2,6,1,4]))
+        
+        
+nums = [5,3,2,6,1,4]
+print(quickSort(nums))
