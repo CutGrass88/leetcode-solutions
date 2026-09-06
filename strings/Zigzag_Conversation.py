@@ -3,7 +3,7 @@ def convert(s, numRows):
     if sLen < 3:
         return s
     
-    rows = [[] for _ in range(numRows)] # 5 rows
+    rows = [[] for _ in range(numRows)]
     if numRows == 1:
         return s
     elif numRows == 2:
